@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crud Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="box">
+          <nav class="navbar is-primary" role="navigation">
+            <div class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item"> <strong>Users</strong> </a>
+              </div>
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <a class="button is-link">
+                    <strong>Add User</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div>
+            <% if(users.length) { %>
+            <table class="table is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Position</th>
+                  <th width="200px">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i = 0; i< users.length; i++) { %>
+                <tr>
+                  <th scope="row"><%= (i+1) %></th>
+                  <td><%= users[i].name%></td>
+                  <td><%= users[i].email%></td>
+                  <td><%= users[i].position%></td>
+                  <td class="field is-grouped">
+                    <a class="button is-link is-outlined mx-2">Details</a>
+                    <a class="button is-success mr-2">Edit</a>
+                    <a
+                      class="button is-danger"
+                      onclick="return alert('Are you sure want to delete this record?')"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!users.length) { %>
+            <p class="text-center">No users found!</p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

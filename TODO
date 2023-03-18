@@ -1,0 +1,19 @@
+Passo a passo de criacao do crud 
+Todo:
+  ☐ criar nova pasta
+  ☐ npm init
+  ☐ instalar libs
+  ☐ npm i express express-session cookie-parser morgan ejs mysql2 sequelize bulma
+  ☐ criar o app.js
+  ☐ criar a pasta config
+  ☐ criar o db config
+  ☐ criar a pasta models
+  ☐ criar o index
+  ☐ criar os models de container e movimentacoes
+  ☐ adicionar no index de models a relacao das tabelas
+  ☐ criar os controllers
+  ☐ criar as rotas
+  ☐ testas
+  ☐ criar as views
+  ☐ estilizar
+  ☐ testar
